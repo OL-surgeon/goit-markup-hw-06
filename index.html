@@ -45,6 +45,80 @@
             </li>
           </ul>
         </address>
+        <button type="button" class="menu-open">
+          <svg class="menu-open-icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-btn-mobile"></use>
+          </svg>
+        </button>
+        <div class="mob-menu">
+          <div>
+            <button type="button" class="menu-close">
+              <svg class="" width="8" height="8">
+                <use href="./images/icons.svg#icon-close"></use>
+              </svg>
+            </button>
+            <nav>
+              <ul class="menu-list">
+                <li class="mob-menu-item">
+                  <a class="menu-nav current" href="./index.html">Studio</a>
+                </li>
+                <li class="mob-menu-item">
+                  <a class="menu-nav" href="">Portfolio</a>
+                </li>
+                <li class="mob-menu-item">
+                  <a class="menu-nav" href="">Contacts</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div>
+            <address class="menu-address">
+              <ul class="menu-list">
+                <li class="menu-item">
+                  <a class="mail-mob" href="tel:+110001111111"
+                    >+11 (000) 111-11-11</a
+                  >
+                </li>
+                <li class="menu-item">
+                  <a class="mail-mob" href="mailto:info@devstudio.com"
+                    >info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+            </address>
+
+            <ul class="icon-mob-section-lists">
+              <li class="icon-third-section-list">
+                <a class="icon-third-section-link" href="">
+                  <svg class="icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="icon-third-section-list">
+                <a class="icon-third-section-link" href="">
+                  <svg class="icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="icon-third-section-list">
+                <a class="icon-third-section-link" href="">
+                  <svg class="icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="icon-third-section-list">
+                <a class="icon-third-section-link" href="">
+                  <svg class="icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <main>
@@ -115,6 +189,7 @@
           <ul class="third-section-list">
             <li class="photos">
               <img
+                srcset="./images/Mark.jpg 1x, ./images/Mark-2x.jpg 2x"
                 src="./images/Mark.jpg"
                 width="264"
                 height="260"
@@ -158,6 +233,7 @@
             </li>
             <li class="photos">
               <img
+                srcset="./images/Tom.jpg 1x, ./images/Tom-2x.jpg 2x"
                 src="./images/Tom.jpg"
                 width="264"
                 height="260"
@@ -201,6 +277,7 @@
             </li>
             <li class="photos">
               <img
+                srcset="./images/Camila.jpg 1x, ./images/Camila-2x.jpg 2x"
                 src="./images/Camila.jpg"
                 width="264"
                 height="260"
@@ -244,6 +321,7 @@
             </li>
             <li class="photos">
               <img
+                srcset="./images/Daniel.jpg 1x, ./images/Daniel-2x.jpg 2x"
                 src="./images/Daniel.jpg"
                 width="264"
                 height="260"
@@ -294,12 +372,32 @@
           <ul class="fourth-section-list">
             <li class="fourth-section-photos">
               <div class="fourth-section-img">
-                <img
-                  src="./images/banking.jpg"
-                  width="360"
-                  height="260"
-                  alt="Banking App"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1440px )"
+                    srcset="./images/banking.jpg 1x, ./images/Banking-2x.jpg 2x"
+                  />
+                  <source
+                    media="(min-width: 768px )"
+                    srcset="
+                      ./images/Banking-desktop.jpg    1x,
+                      ./images/Banking-desktop-2x.jpg 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 320px )"
+                    srcset="
+                      ./images/Banking-mob.jpg    1x,
+                      ./images/Banking-mob-2x.jpg 2x
+                    "
+                  />
+                  <img
+                    src="./images/banking.jpg"
+                    width="360"
+                    alt="Banking App"
+                  />
+                </picture>
+
                 <p class="text-cover">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -313,12 +411,35 @@
             </li>
             <li class="fourth-section-photos">
               <div class="fourth-section-img">
-                <img
-                  src="./images/Cashless_Payment.jpg"
-                  width="360"
-                  height="300"
-                  alt="Cashless Payment"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1440px )"
+                    srcset="
+                      ./images/Cashless_Payment.jpg 1x,
+                      ./images/Cashless-2x.jpg      2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 768px )"
+                    srcset="
+                      ./images/Cashless-desktop.jpg    1x,
+                      ./images/Cashless-desktop-2x.jpg 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 320px )"
+                    srcset="
+                      ./images/Cashless-mob.jpg    1x,
+                      ./images/Cashless-mob-2x.jpg 2x
+                    "
+                  />
+                  <img
+                    src="./images/Cashless_Payment.jpg"
+                    width="360"
+                    alt="Cashless Payment"
+                  />
+                </picture>
+
                 <p class="text-cover">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -333,12 +454,35 @@
             </li>
             <li class="fourth-section-photos">
               <div class="fourth-section-img">
-                <img
-                  src="./images/Meditation_App.jpg"
-                  width="360"
-                  height="300"
-                  alt="Meditation App"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1440px )"
+                    srcset="
+                      ./images/Meditation_App.jpg 1x,
+                      ./images/Meditation-2x.jpg  2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 768px )"
+                    srcset="
+                      ./images/Meditation-desktop.jpg    1x,
+                      ./images/Meditation-desktop-2x.jpg 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 320px )"
+                    srcset="
+                      ./images/Meditation-mob.jpg    1x,
+                      ./images/Meditation-mob-2x.jpg 2x
+                    "
+                  />
+                  <img
+                    src="./images/Meditation_App.jpg"
+                    width="360"
+                    alt="Meditation App"
+                  />
+                </picture>
+
                 <p class="text-cover">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -353,12 +497,35 @@
             </li>
             <li class="fourth-section-photos">
               <div class="fourth-section-img">
-                <img
-                  src="./images/Taxi_Service.jpg"
-                  width="360"
-                  height="300"
-                  alt="Taxi Service"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1440px )"
+                    srcset="
+                      ./images/Taxi_Service.jpg 1x,
+                      ./images/Taxi-2x.jpg      2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 768px )"
+                    srcset="
+                      ./images/Taxi-desktop.jpg    1x,
+                      ./images/Taxi-desktop-2x.jpg 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 320px )"
+                    srcset="
+                      ./images/Taxi-mob.jpg    1x,
+                      ./images/Taxi-mob-2x.jpg 2x
+                    "
+                  />
+                  <img
+                    src="./images/Taxi_Service.jpg"
+                    width="360"
+                    alt="Taxi Service"
+                  />
+                </picture>
+
                 <p class="text-cover">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -373,12 +540,35 @@
             </li>
             <li class="fourth-section-photos">
               <div class="fourth-section-img">
-                <img
-                  src="./images/Screen_Illustrations.jpg"
-                  width="360"
-                  height="300"
-                  alt="Screen Illustrations"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1440px )"
+                    srcset="
+                      ./images/Taxi_Service.jpg 1x,
+                      ./images/Screen-2x.jpg    2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 768px )"
+                    srcset="
+                      ./images/Taxi-desktop.jpg    1x,
+                      ./images/Taxi-desktop-2x.jpg 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 320px )"
+                    srcset="
+                      ./images/Screen-mob.jpg    1x,
+                      ./images/Screen-mob-2x.jpg 2x
+                    "
+                  />
+                  <img
+                    src="./images/Screen_Illustrations.jpg"
+                    width="360"
+                    alt="Screen Illustrations"
+                  />
+                </picture>
+
                 <p class="text-cover">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -393,12 +583,35 @@
             </li>
             <li class="fourth-section-photos">
               <div class="fourth-section-img">
-                <img
-                  src="./images/Online_Courses.jpg"
-                  width="360"
-                  height="300"
-                  alt="Online Courses"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1440px )"
+                    srcset="
+                      ./images/Online_Courses.jpg 1x,
+                      ./images/Online-2x.jpg      2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 768px )"
+                    srcset="
+                      ./images/Online-desktop.jpg    1x,
+                      ./images/Online-desktop-2x.jpg 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 320px )"
+                    srcset="
+                      ./images/Online-mob.jpg    1x,
+                      ./images/Online-mob-2x.jpg 2x
+                    "
+                  />
+                  <img
+                    src="./images/Online_Courses.jpg"
+                    width="360"
+                    alt="Online Courses"
+                  />
+                </picture>
+
                 <p class="text-cover">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
